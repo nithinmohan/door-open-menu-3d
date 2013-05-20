@@ -11,23 +11,15 @@ body
 .menucontainer
 {
 	
-	width:350px;
-	height:auto;
-	position: relative;
-	font-size: 70px;
-	opacity: .5;
+	
 }
 #contleft
 {
-	float: left;
-top:40px;
-left: 40px;
+	
 }
 #contright
 {
-	float: right;
-	top:40px;
-	right: 40px;
+	
 }
 #contright
 {
@@ -35,8 +27,10 @@ left: 40px;
 }
 .menublocks
 {
-	position: absolute;
-	width: 100%;
+	width:350px;
+	position: relative;
+	font-size: 70px;
+	opacity: .5;
 	height:auto;
 	-webkit-transition:all .3s ease-in-out;
 	
@@ -44,11 +38,17 @@ left: 40px;
 }
 #blockleft
 {
+	float: left;
+top:40px;
+left: 40px;
 	-webkit-transform-origin-x: 0%;
     -webkit-transform-origin-y: 50%;
 }
 #blockright
 {
+	float: right;
+	top:40px;
+	right: 40px;
 	-webkit-transform-origin-x: 100%;
     -webkit-transform-origin-y: 50%;
 }
@@ -64,19 +64,11 @@ left: 40px;
 	padding-bottom: 10%;
 	-webkit-transition:all .3s ease-in-out;
 	z-index: 0;	
-}
-.menuleft
-{
+	-webkit-transform: perspective(300) translateZ(0px);
 	-webkit-transform-origin-x: 50%;
     -webkit-transform-origin-y: 50%;
-    -webkit-transform: perspective(300) translateZ(0px);
 }
-.menuright
-{
-	-webkit-transform-origin-x: 50%;
-    -webkit-transform-origin-y: 50%;
-    -webkit-transform: perspective(300) translateZ(0px);
-}
+
 /*.menucontainer:hover #blockleft
 {	 
 -webkit-transform: perspective(300) rotateY(20deg);
@@ -103,15 +95,6 @@ left: 40px;
 	-webkit-filter:blur(0px);
 	cursor: pointer;
 	z-index: 1;
-	-webkit-filter:blur(0px);
-}
-.menucontainer>.menublocks>.menuleft:hover
-{
-	-webkit-transform: perspective(300) translateZ(70px);
-    -webkit-box-shadow: -10px 5px 50px 6px #000;
-}
-.menucontainer>.menublocks>.menuright:hover
-{
 	-webkit-transform: perspective(300) translateZ(70px);
     -webkit-box-shadow: -10px 5px 50px 6px #000;
 }
@@ -119,14 +102,14 @@ left: 40px;
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-	$(".menucontainer").mouseenter(function()
+	$(".menublocks").mouseenter(function()
 	{
 		$(".menuitem").addClass("blur");
 		$(this).removeClass("blur");
 		$("#blockleft").addClass("leftanim");
 		$("#blockright").addClass("rightanim");
 	});
-	$(".menucontainer").mouseleave(function()
+	$(".menublocks").mouseleave(function()
 	{
 		$(".menuitem").removeClass("blur");
 		$(".menublocks").removeClass("blur");
@@ -135,7 +118,6 @@ $(document).ready(function() {
 	});
 });
 </script>
-
 </head>
 <body>
 <div class="menucontainer" id="contleft">
