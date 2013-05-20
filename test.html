@@ -1,0 +1,158 @@
+<html>
+<head>
+<style>
+body
+{
+	background-image: url(aa.jpg);  
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+}
+.menucontainer
+{
+	
+	width:350px;
+	height:auto;
+	position: relative;
+	font-size: 70px;
+	opacity: .5;
+}
+#contleft
+{
+	float: left;
+top:40px;
+left: 40px;
+}
+#contright
+{
+	float: right;
+	top:40px;
+	right: 40px;
+}
+#contright
+{
+
+}
+.menublocks
+{
+	position: absolute;
+	width: 100%;
+	height:auto;
+	-webkit-transition:all .3s ease-in-out;
+	
+    -webkit-transform: perspective(300) rotateY(0deg); 
+}
+#blockleft
+{
+	-webkit-transform-origin-x: 0%;
+    -webkit-transform-origin-y: 50%;
+}
+#blockright
+{
+	-webkit-transform-origin-x: 100%;
+    -webkit-transform-origin-y: 50%;
+}
+.menuitem
+{
+	background-image: url("d.png"); 
+	background-repeat: repeat-x repeat-y; 
+	position:relative;
+	padding-left: 10%;
+	height: 60px;
+	width:90%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	-webkit-transition:all .3s ease-in-out;
+	z-index: 0;	
+}
+.menuleft
+{
+	-webkit-transform-origin-x: 50%;
+    -webkit-transform-origin-y: 50%;
+    -webkit-transform: perspective(300) translateZ(0px);
+}
+.menuright
+{
+	-webkit-transform-origin-x: 50%;
+    -webkit-transform-origin-y: 50%;
+    -webkit-transform: perspective(300) translateZ(0px);
+}
+/*.menucontainer:hover #blockleft
+{	 
+-webkit-transform: perspective(300) rotateY(20deg);
+}
+.menucontainer:hover #blockright
+{	 
+-webkit-transform: perspective(300) rotateY(-20deg);
+}*/
+.leftanim
+{
+	-webkit-transform: perspective(300) rotateY(20deg);
+}
+.rightanim
+{
+	-webkit-transform: perspective(300) rotateY(-20deg);
+}
+.blur
+{
+	-webkit-filter:blur(4px);
+}
+
+.menucontainer>.menublocks>.menuitem:hover
+{
+	-webkit-filter:blur(0px);
+	cursor: pointer;
+	z-index: 1;
+	-webkit-filter:blur(0px);
+}
+.menucontainer>.menublocks>.menuleft:hover
+{
+	-webkit-transform: perspective(300) translateZ(70px);
+    -webkit-box-shadow: -10px 5px 50px 6px #000;
+}
+.menucontainer>.menublocks>.menuright:hover
+{
+	-webkit-transform: perspective(300) translateZ(70px);
+    -webkit-box-shadow: -10px 5px 50px 6px #000;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$(".menucontainer").mouseenter(function()
+	{
+		$(".menuitem").addClass("blur");
+		$(this).removeClass("blur");
+		$("#blockleft").addClass("leftanim");
+		$("#blockright").addClass("rightanim");
+	});
+	$(".menucontainer").mouseleave(function()
+	{
+		$(".menuitem").removeClass("blur");
+		$(".menublocks").removeClass("blur");
+		$("#blockleft").removeClass("leftanim");
+		$("#blockright").removeClass("rightanim");
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="menucontainer" id="contleft">
+<div class="menublocks" id="blockleft">
+<div class="menuitem menuleft" id="one">menu1</div>
+<div class="menuitem menuleft" id="two">menu2</div>
+<div class="menuitem menuleft" id="three">menu3</div>
+<div class="menuitem menuleft" id="four">menu4</div>
+</div>
+</div>
+<div class="menucontainer" id="contright">
+<div class="menublocks" id="blockright">
+<div class="menuitem menuright" id="oner">menu5</div>
+<div class="menuitem menuright" id="twor">menu6</div>
+<div class="menuitem menuright" id="threer">menu7</div>
+<div class="menuitem menuright" id="fourr">menu8</div>
+</div>
+</div>
+</body>
+</html>
