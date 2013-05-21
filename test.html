@@ -50,7 +50,6 @@ body
 	-webkit-transform-origin-x: 50%;
     -webkit-transform-origin-y: 50%;
 }
-
 /*.menucontainer:hover #blockleft
 {	 
 -webkit-transform: perspective(300) rotateY(20deg);
@@ -72,6 +71,10 @@ body
 	-webkit-filter:blur(4px);
 }
 .menublocks>.menuitem:hover
+{
+	
+}
+.menuhover
 {
 	-webkit-filter:blur(0px);
 	cursor: pointer;
@@ -100,29 +103,39 @@ body
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
-	$(".menublocks").mouseenter(function()
-	{
-		$(".menuitem").addClass("blur");
-		$(this).removeClass("blur");
-		$("#blockleft").addClass("leftanim");
-		$("#blockright").addClass("rightanim");
-	});
-	$(".menublocks").mouseleave(function()
+	initial_state=function()
 	{
 		$(".menuitem").removeClass("blur");
 		$(".menublocks").removeClass("blur");
 		$("#blockleft").removeClass("leftanim");
 		$("#blockright").removeClass("rightanim");
-	});
+	}
+	selected_state=function(elem)
+	{
+		$(".menuitem").addClass("blur");
+		$("#blockleft").addClass("leftanim");
+		$("#blockright").addClass("rightanim");
+	}
+	comefor=function(elem){$(elem).addClass("menuhover");}
+	comeback=function(){$(".menuitem").removeClass("menuhover");}
+$(document).ready(function() {
+	var cur_selected;
+	$(".menublocks").mouseenter(function(){selected_state(this)});
+	$(".menublocks").mouseleave(initial_state);
+	$(".menuitem").mouseenter(function(){comefor(this);});
+	$(".menuitem").mouseleave(comeback);
 	$(".menuitem").click(function()
 	{
+		if(cur_selected!=this)
+		{
+		old_selected=cur_selected;
+		$("#c"+$(old_selected).attr("id")).removeClass("selected");
+		cur_selected=this;
 		var selectedmenu=$(this).attr("id");
 		$("#c"+selectedmenu).addClass("selected");
-
-
-
+		}
 	})
+	$(".content").hover(function(){selected_state(cur_selected);comefor(cur_selected);});
 });
 </script>
 </head>
