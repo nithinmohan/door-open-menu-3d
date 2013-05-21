@@ -4,9 +4,9 @@
 body
 {
 	background-image: url(aa.jpg);  
+	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-	position: relative;
 }
 .menublocks
 {
@@ -16,21 +16,20 @@ body
 	opacity: .5;
 	height:auto;
 	-webkit-transition:all .3s ease-in-out;
-	
     -webkit-transform: perspective(300) rotateY(0deg); 
 }
 #blockleft
 {
 	float: left;
-top:40px;
-left: 40px;
+	top:40px;
+	left: 40px;
 	-webkit-transform-origin-x: 0%;
     -webkit-transform-origin-y: 50%;
 }
 #blockright
 {
 	float: right;
-	top:40px;
+	top: 40px;
 	right: 40px;
 	-webkit-transform-origin-x: 100%;
     -webkit-transform-origin-y: 50%;
@@ -72,7 +71,6 @@ left: 40px;
 {
 	-webkit-filter:blur(4px);
 }
-
 .menublocks>.menuitem:hover
 {
 	-webkit-filter:blur(0px);
@@ -80,6 +78,24 @@ left: 40px;
 	z-index: 1;
 	-webkit-transform: perspective(300) translateZ(70px);
     -webkit-box-shadow: -10px 5px 50px 6px #000;
+}
+.content
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:0px;
+	height:0;
+	background-color: red;
+	-webkit-transition:all .3s ease-in-out;
+}
+.selected
+{
+	top:0%;
+	position:absolute;
+	left:299px;
+	width:768px;
+	height:100%;
 }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -99,6 +115,14 @@ $(document).ready(function() {
 		$("#blockleft").removeClass("leftanim");
 		$("#blockright").removeClass("rightanim");
 	});
+	$(".menuitem").click(function()
+	{
+		var selectedmenu=$(this).attr("id");
+		$("#c"+selectedmenu).addClass("selected");
+
+
+
+	})
 });
 </script>
 </head>
@@ -110,10 +134,18 @@ $(document).ready(function() {
 <div class="menuitem menuleft" id="four">menu4</div>
 </div>
 <div class="menublocks" id="blockright">
-<div class="menuitem menuright" id="oner">menu5</div>
-<div class="menuitem menuright" id="twor">menu6</div>
-<div class="menuitem menuright" id="threer">menu7</div>
-<div class="menuitem menuright" id="fourr">menu8</div>
+<div class="menuitem menuright" id="five">menu5</div>
+<div class="menuitem menuright" id="six">menu6</div>
+<div class="menuitem menuright" id="seven">menu7</div>
+<div class="menuitem menuright" id="eight">menu8</div>
 </div>
+<div class="content" id="cone"></div>
+<div class="content" id="ctwo"></div>
+<div class="content" id="cthree"></div>
+<div class="content" id="cfour"></div>
+<div class="content" id="cfive"></div>
+<div class="content" id="csix"></div>
+<div class="content" id="cseven"></div>
+<div class="content" id="ceight"></div>
 </body>
 </html>
