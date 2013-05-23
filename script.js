@@ -33,7 +33,7 @@ $(".menuitem").click(function()
 	$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);});
 }
 });
-$("#home").click(function(){
+$(".home").click(function(){
 	initial_state();
 	comeback();
 	$(".content").removeClass("selected");

@@ -1,15 +1,76 @@
-@font-face {
-	font-family: "fontastique";
-	src: url(fontastique.ttf) format("truetype");
+a {
+  text-decoration:none;
 }
+ @font-face {
+  font-family: "fontastique";
+  src: url(fontastique.ttf) format("truetype");
+            }
 body
 {
-	background-image: url(aa.jpg);  
+	background-image: url(bg.jpg);  
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
 
 }
+
+#wallpaper
+ {
+  position:absolute;
+  width:0%;
+  height:0%;
+  top:50%;
+  left:50%;
+  background-color:white;
+  z-index:-1;
+  border-radius: 50%;
+  box-shadow:0px 0px 1500px 200px rgba(255,255,255,0.3);
+ }
+
+/*Header - Tathva - Start*/
+
+#top
+ {
+  background-color:black;
+  position:absolute;
+  left:0px;
+  display:inline;
+  width:100%;
+  bottom:0px;
+ }
+#title
+ {
+  font-style:"fontastique";
+  color:#DDDDEE;
+  height:15%;
+  margin-left:37%;
+  margin-right:37%;
+ }
+#tat 
+{
+  font-size:500%;
+  padding-top: 1%;
+  cursor:pointer;
+}
+#tat:hover
+ {
+  text-shadow: 0px 0px 25px #DDDFFF;
+  color:#FFFFFF;
+ }
+#logo
+ {
+  float:left;
+  height:15%;
+ }
+#date
+ {
+  /*margin-top:-1%;*/
+  margin-left: 40%;
+  font-size:100%;
+ }
+
+/*Header - Tathva - End*/
+
 .menublocks
 {
 	width:26%;
@@ -60,7 +121,7 @@ body
 }
 .blur
 {
-	-webkit-filter:blur(4px);
+	-webkit-filter:blur(2px);
 }
 .menuhover
 {
