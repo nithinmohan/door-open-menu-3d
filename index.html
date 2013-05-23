@@ -84,7 +84,7 @@ body
 	top:50%;
 	left:50%;
 	width:0px;
-	height:0;
+	height:0px;
 	background-color: red;
 	-webkit-transition:all .3s ease-in-out;
 }
@@ -95,6 +95,21 @@ body
 	left:299px;
 	width:768px;
 	height:100%;
+}
+#home
+{
+	position: absolute;
+	width:100px;
+	height: 20px;
+	background-color: yellow;
+	opacity: 0px;
+	z-index: 4;
+}
+#sa
+{
+	position: absolute;
+	width:100%;
+	height: 100%;
 }
 </style>
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
@@ -133,10 +148,14 @@ $(document).ready(function() {
 		$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);})
 		}
 	})
+	$("#home").click(function(){initial_state();comeback();});
 });
 </script>
 </head>
 <body>
+<div id="sa">
+<div id="home"></div>
+
 <div class="menublocks" id="blockleft">
 <div class="menuitem menuleft" id="one">menu1</div>
 <div class="menuitem menuleft" id="two">menu2</div>
@@ -157,5 +176,6 @@ $(document).ready(function() {
 <div class="content" id="csix"></div>
 <div class="content" id="cseven"></div>
 <div class="content" id="ceight"></div>
+</div>
 </body>
 </html>
