@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "fontastique";
+	src: url(fontastique.ttf) format("truetype");
+}
+body
+{
+	background-image: url(aa.jpg);  
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.menublocks
+{
+	width:350px;
+	position: relative;
+	font-size: 70px;
+	opacity: .5;
+	height:auto;
+	-webkit-transition:all .3s ease-in-out;
+	-webkit-transform: perspective(300) rotateY(0deg); 
+}
+#blockleft
+{
+	float: left;
+	top:40px;
+	left: 40px;
+	-webkit-transform-origin-x: 0%;
+	-webkit-transform-origin-y: 50%;
+}
+#blockright
+{
+	float: right;
+	top: 40px;
+	right: 40px;
+	-webkit-transform-origin-x: 100%;
+	-webkit-transform-origin-y: 50%;
+}
+.menuitem
+{
+	background-image: url("d.png"); 
+	background-repeat: repeat-x repeat-y; 
+	position:relative;
+	padding-left: 10%;
+	height: 60px;
+	width:90%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	-webkit-transition:all .3s ease-in-out;
+	z-index: 0;	
+	-webkit-transform: perspective(300) translateZ(0px);
+	-webkit-transform-origin-x: 50%;
+	-webkit-transform-origin-y: 50%;
+}
+.leftanim
+{
+	-webkit-transform: perspective(300) rotateY(20deg);
+}
+.rightanim
+{
+	-webkit-transform: perspective(300) rotateY(-20deg);
+}
+.blur
+{
+	-webkit-filter:blur(4px);
+}
+.menuhover
+{
+	-webkit-filter:blur(0px);
+	cursor: pointer;
+	z-index: 1;
+	-webkit-transform: perspective(300) translateZ(70px);
+	-webkit-box-shadow: -10px 5px 50px 6px #000;
+}
+.content
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:0px;
+	height:0;
+	background-color: red;
+	-webkit-transition:all .3s ease-in-out;
+}
+.selected
+{
+	top:0%;
+	position:absolute;
+	left:299px;
+	width:768px;
+	height:100%;
+}
+#home
+{
+	position: absolute;
+	width:100px;
+	height: 30px;
+	background-color: yellow;
+}
