@@ -2,8 +2,8 @@ a {
   text-decoration:none;
 }
  @font-face {
-  font-family: "fontastique";
-  src: url(fontastique.ttf) format("truetype");
+  font-family: "tathva";
+  src: url(tathva.ttf) format("truetype");
             }
 body
 {
@@ -11,7 +11,6 @@ body
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-
 }
 
 #wallpaper
@@ -47,7 +46,7 @@ body
  }
 #title
  {
-  font-style:"fontastique";
+  font-style:"tathva";
   color:#DDDDEE;
   height:15%;
   margin-left:37%;
@@ -73,23 +72,53 @@ body
  }
 #date
  {
-  /*margin-top:-1%;*/
-  margin-left: 40%;
+  clear:none;
   font-size:100%;
  }
 
 /*Header - Tathva - End*/
 
+.textheader
+{
+	margin-top: 5%;
+	margin-left:5%;
+	width:90%;
+	background-color:blue;
+	position:relative;
+	font-size:30px;
+	opacity:1.0;
+	height:15%;
+}
+.textcontent
+{	
+	margin-left:5%; 
+	margin-top: 5%;
+	width:90%;
+	background-color:green;
+	position:relative;
+	font-size:30px;
+	opacity:1.0;
+	height:65%;
+}
 .menublocks
 {
 	width:26%;
+	color:white;
 	position: relative;
 	font-size: 35px;
-	opacity: .5;
+	opacity: 0.8;
 	height:auto;
 	-webkit-transition:all .3s ease-in-out;
 	-webkit-transform: perspective(300) rotateY(0deg); 
 }
+.menublocks>div:last-child
+ {
+	border-bottom:0px;
+ }
+span
+ {
+ 	opacity:1;
+ }
 #blockleft
 {
 	float: left;
@@ -109,7 +138,8 @@ body
 }
 .menuitem
 {
-	background-image: url("d.png"); 
+	border-bottom:2px dashed #AAAAAA;
+	background-image: url("footer.jpg"); 
 	position:relative;
 	padding: 10%;
 	height: 9%;
@@ -135,6 +165,7 @@ body
 .menuhover
 {
 	-webkit-filter:blur(0px);
+	border-bottom:0px;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-transform: perspective(300) translateZ(70px);
