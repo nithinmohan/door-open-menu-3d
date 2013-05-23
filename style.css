@@ -40,7 +40,6 @@ body
 .menuitem
 {
 	background-image: url("d.png"); 
-	background-repeat: repeat-x repeat-y; 
 	position:relative;
 	padding: 10%;
 	height: 9%;
