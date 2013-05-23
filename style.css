@@ -77,9 +77,41 @@ body
 	top:50%;
 	left:50%;
 	width:0px;
-	height:0;
-	background-color: red;
+	height:0px;
 	-webkit-transition:all .3s ease-in-out;
+}
+#cone 
+{
+	background-color: red;
+}
+#ctwo 
+{
+	background-color: green;
+}
+#cthree 
+{
+	background-color: blue;
+}
+#cfour 
+{
+	background-color: yellow;
+}
+#cfive 
+{
+	background-color: black;
+	color:white;
+}
+#csix 
+{
+	background-color: teal;
+}
+#cseven 
+{
+	background-color: indigo;
+}
+#ceight 
+{
+	background-color: pink;
 }
 .selected
 {
