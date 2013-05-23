@@ -1,3 +1,4 @@
+ishome=1;
 initial_state=function()
 {
 	$(".menuitem").removeClass("blur");
@@ -20,8 +21,9 @@ $(".menuitem").mouseenter(function(){comefor(this);});
 $(".menuitem").mouseleave(comeback);
 $(".menuitem").click(function()
 {
-	if(cur_selected!=this)
+	if((cur_selected!=this)||(ishome==1))
 	{
+		ishome=0;
 	old_selected=cur_selected;
 	$("#c"+$(old_selected).attr("id")).removeClass("selected");
 	cur_selected=this;
@@ -30,12 +32,13 @@ $(".menuitem").click(function()
 	$(".menublocks").unbind("mouseleave");
 	$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);});
 }
-})
+});
 $("#home").click(function(){
 	initial_state();
 	comeback();
 	$(".content").removeClass("selected");
 	$(".menublocks").unbind("mouseleave");
 	$(".menublocks").mouseleave(initial_state);
+	ishome=1;
 });
 });
