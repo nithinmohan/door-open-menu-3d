@@ -1,0 +1,109 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$(".thumbs").mousemove(function(e){
+		position=e.pageX;
+		relative_pos=position-parseInt($("#super").css("margin-left"));
+		largewidth=$(".thumbs").width();
+		smallwidth=$("#super").width();
+		largewidth=largewidth-smallwidth;
+		newmar=relative_pos*largewidth/smallwidth;
+		$(".thumbs").css({"margin-left":"-"+newmar+"px"},10);
+	})
+	$(".thumbs img").click(function(){
+		alert($(this).attr("src"));
+	});
+});
+</script>
+<style>
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+#container
+{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	border:3px solid black;
+}
+#container>#list>img:first-child
+{
+	position: relative;
+	margin-left:-400px;
+}
+#list
+{
+	width:2000px;
+	height:100%;
+}
+#gal
+{
+	width:500px;
+	height:300px;
+}
+#container>#list>img
+{
+	margin:0px;
+	position: relative;
+	float:left;
+	width:500px;
+	height:300px;
+}
+.thumbs
+{	margin-left:0px;
+	width:1800px;
+	height:100px;
+	overflow: hidden;
+	-webkit-transition:all .1s ease-in-out;
+
+}
+.thumbs>img
+{
+	float:left;
+	width:180px;
+	height:100%;
+}
+#super
+{
+	margin-left: 30px;
+	background-color: red;
+	height:500px;
+	width:500px;
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+<!--<div id="gal">
+	<div id="container">
+		<div id="list">
+	<img src="images/1.jpg"></img>
+	<img src="images/2.jpg"></img>
+	<img src="images/3.jpg"></img>
+	<img src="images/4.jpg"></img>
+	<img src="images/5.jpg"></img>
+	<img src="images/6.jpg"></img>
+	</div>
+</div>
+</div>-->
+<div id="super">
+<div class="thumbs">
+	<img src="images/1.jpg"></img>
+	<img src="images/2.jpg"></img>
+	<img src="images/3.jpg"></img>
+	<img src="images/4.jpg"></img>
+	<img src="images/5.jpg"></img>
+	<img src="images/6.jpg"></img>
+	<img src="images/7.jpg"></img>
+	<img src="images/8.jpg"></img>
+	<img src="images/9.jpg"></img>
+	<img src="images/10.jpg"></img>
+</div>
+</div>
+</div>
+</body>
+</html>
