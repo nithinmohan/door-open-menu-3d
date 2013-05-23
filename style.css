@@ -78,6 +78,28 @@ body
 
 /*Header - Tathva - End*/
 
+.textheader
+{
+	margin-top: 5%;
+	margin-left:5%;
+	width:90%;
+	background-color:blue;
+	position:relative;
+	font-size:30px;
+	opacity:1.0;
+	height:15%;
+}
+.textcontent
+{	
+	margin-left:5%; 
+	margin-top: 5%;
+	width:90%;
+	background-color:green;
+	position:relative;
+	font-size:30px;
+	opacity:1.0;
+	height:65%;
+}
 .menublocks
 {
 	width:26%;
