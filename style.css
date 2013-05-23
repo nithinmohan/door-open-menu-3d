@@ -35,17 +35,16 @@ body
 	right: 40px;
 	-webkit-transform-origin-x: 100%;
 	-webkit-transform-origin-y: 50%;
+	text-align:right;
 }
 .menuitem
 {
 	background-image: url("d.png"); 
 	background-repeat: repeat-x repeat-y; 
 	position:relative;
-	padding-left: 10%;
+	padding: 10%;
 	height: 9%;
-	width:90%;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	width:80%;
 	-webkit-transition:all .3s ease-in-out;
 	z-index: 0;	
 	-webkit-transform: perspective(300) translateZ(0px);
