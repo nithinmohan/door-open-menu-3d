@@ -70,10 +70,6 @@ body
 {
 	-webkit-filter:blur(4px);
 }
-.menublocks>.menuitem:hover
-{
-	
-}
 .menuhover
 {
 	-webkit-filter:blur(0px);
@@ -101,26 +97,26 @@ body
 	height:100%;
 }
 </style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<script src="jquery.js"></script>
 <script>
 	initial_state=function()
 	{
 		$(".menuitem").removeClass("blur");
-		$(".menublocks").removeClass("blur");
 		$("#blockleft").removeClass("leftanim");
 		$("#blockright").removeClass("rightanim");
-	}
-	selected_state=function(elem)
+	}//for initial plane state
+	selected_state=function()
 	{
 		$(".menuitem").addClass("blur");
 		$("#blockleft").addClass("leftanim");
 		$("#blockright").addClass("rightanim");
-	}
-	comefor=function(elem){$(elem).addClass("menuhover");}
-	comeback=function(){$(".menuitem").removeClass("menuhover");}
+	}//for opened state and blur for all
+	comefor=function(elem){$(".menuitem").removeClass("menuhover");$(elem).addClass("menuhover");}//for forwarding hovered menuitem and setting its blur zero
+	comeback=function(){$(".menuitem").removeClass("menuhover");}//setting menu hover effect to zero for all menuitems
 $(document).ready(function() {
 	var cur_selected;
-	$(".menublocks").mouseenter(function(){selected_state(this)});
+	$(".menublocks").mouseenter(selected_state);
 	$(".menublocks").mouseleave(initial_state);
 	$(".menuitem").mouseenter(function(){comefor(this);});
 	$(".menuitem").mouseleave(comeback);
@@ -133,9 +129,10 @@ $(document).ready(function() {
 		cur_selected=this;
 		var selectedmenu=$(this).attr("id");
 		$("#c"+selectedmenu).addClass("selected");
+		$(".menublocks").unbind("mouseleave");
+		$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);})
 		}
 	})
-	$(".content").hover(function(){selected_state(cur_selected);comefor(cur_selected);});
 });
 </script>
 </head>
