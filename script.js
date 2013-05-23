@@ -28,7 +28,14 @@ $(".menuitem").click(function()
 	var selectedmenu=$(this).attr("id");
 	$("#c"+selectedmenu).addClass("selected");
 	$(".menublocks").unbind("mouseleave");
-	$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);})
+	$(".menublocks").bind("mouseleave",function(){comefor(cur_selected);});
 }
 })
+$("#home").click(function(){
+	initial_state();
+	comeback();
+	$(".content").removeClass("selected");
+	$(".menublocks").unbind("mouseleave");
+	$(".menublocks").mouseleave(initial_state);
+});
 });
