@@ -67,7 +67,10 @@ $(".thumbs").mousemove(function(e){
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
 		newmar=relative_pos*largewidth/smallwidth;
-		$(".thumbs").css({"margin-left":"-"+newmar+"px"},10);
+		$(".thumbs").animate({"margin-left":"-"+newmar+"px"},{
+                    duration: 'fast',
+                    easing: 'easeInSine'
+                });
 	});
 	k=180;
 	var src;
