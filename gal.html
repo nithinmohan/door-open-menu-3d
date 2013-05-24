@@ -12,8 +12,16 @@ $(document).ready(function(){
 		newmar=relative_pos*largewidth/smallwidth;
 		$(".thumbs").css({"margin-left":"-"+newmar+"px"},10);
 	})
-	$(".thumbs img").click(function(){
-		alert($(this).attr("src"));
+	k=180;
+	var src;
+	$(".thumbs>img").click(function(){
+		src=$(this).attr("src");
+		$("#container>.back").attr("src",src);
+		$("#container").css({"-webkit-transform":"perspective(300) rotateY("+k+"deg)"});
+		$("#container>#one").toggleClass("back");
+		$("#container>#two").toggleClass("back");
+
+		k=k+180;
 	});
 });
 </script>
@@ -22,36 +30,6 @@ body
 {
 	margin: 0px;
 	padding: 0px;
-}
-#container
-{
-	overflow:hidden;
-	width:100%;
-	height:100%;
-	border:3px solid black;
-}
-#container>#list>img:first-child
-{
-	position: relative;
-	margin-left:-400px;
-}
-#list
-{
-	width:2000px;
-	height:100%;
-}
-#gal
-{
-	width:500px;
-	height:300px;
-}
-#container>#list>img
-{
-	margin:0px;
-	position: relative;
-	float:left;
-	width:500px;
-	height:300px;
 }
 .thumbs
 {	margin-left:0px;
@@ -71,9 +49,38 @@ body
 {
 	margin-left: 30px;
 	background-color: red;
-	height:500px;
+	height:auto;
 	width:500px;
 	overflow: hidden;
+}
+#container
+{
+	margin-left: 30px;
+	z-index: 1;
+	width:400px;
+	height:400px;
+	-webkit-transform: perspective(300) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;	
+	-webkit-transition:all 1s ease;
+	border:6px solid black;
+
+}
+#container>img
+{
+	position: absolute;
+	backface-visibility:hidden;
+	width: 100%;
+	height: 100%;
+}
+#container>#two
+{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-transition:all 1s ease-in-out;
+	-webkit-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
 }
 </style>
 </head>
@@ -90,6 +97,10 @@ body
 	</div>
 </div>
 </div>-->
+<div id="container">
+	<img src="images/1.jpg" id="one"></img>
+	<img src="images/2.jpg" id="two" class="back"></img>
+</div>
 <div id="super">
 <div class="thumbs">
 	<img src="images/1.jpg"></img>
