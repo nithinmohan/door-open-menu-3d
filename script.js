@@ -61,13 +61,15 @@ $("#two").click(function(){
 
        
 $(".thumbs").mousemove(function(e){
+	var animSpeed=600;
+	var easeType='easeOutCirc'
 		position=e.pageX;
 		relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
 		largewidth=$(".thumbs").width();
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
 		newmar=relative_pos*largewidth/smallwidth;
-		$(".thumbs").css({"margin-left":"-"+newmar+"px"},10);
+		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',  easing: 'easeOutQuart'});
 	});
 	k=180;
 	var src;
