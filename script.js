@@ -53,24 +53,21 @@ function addimage(number)
 function set_thumbs(no_of_thumbs,thumb_width)
 {
 	 $(".thumbs").attr("width",thumb_width*no_of_thumbs);
-	  addimage(17);
+	  addimage(no_of_thumbs);
 }
 $("#two").click(function(){
-	set_thumbs(17,180);
+	set_thumbs(32,180);
 });
 
        
-$(".thumbs").mousemove(function(e){
+$(".thumbs").live("mousemove",function(e){
 		position=e.pageX;
 		relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
 		largewidth=$(".thumbs").width();
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
 		newmar=relative_pos*largewidth/smallwidth;
-		$(".thumbs").animate({"margin-left":"-"+newmar+"px"},{
-                    duration: 'fast',
-                    easing: 'easeInSine'
-                });
+		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',easing: 'easeOutBack'});
 	});
 	k=180;
 	var src;
@@ -79,8 +76,8 @@ $(".thumbs").mousemove(function(e){
 		srcarray=src.split('/');
 		$("#container>.back").attr("src",'images/'+srcarray[2]);
 		$("#container").css({"-webkit-transform":"perspective(600) rotateY("+k+"deg)"});
-		$("#container>#one").toggleClass("back");
-		$("#container>#two").toggleClass("back");
+		$("#container>#one").toggleClass("back front");
+		$("#container>#two").toggleClass("back front");
 		k=k+180;
 	});
 });
