@@ -12,48 +12,82 @@
     font-family: "tathva";
     src: url(tathva.ttf) format("truetype");
               }
+ @font-face {
+    font-family: "nexa-light";
+    src: url(nexa-l.otf);
+              }
+ @font-face {
+    font-family: "ubuntu";
+    src: url(ubuntu.ttf) format("truetype");
+              }
     #title { 
     font-family: "tathva";
                 }
- @font-face {
-    font-family: "nexa";
-    src: url(nexa.otf);
-              }
-    .menuitem { 
-    font-family: "nexa";
+    .textcontent { 
+    font-family: "nexa-light";
+                }           
+	.textheader { 
+    font-family: "ubuntu";
+                }           
+	.menublocks { 
+    font-family: "nexa-light";
+    -webkit-text-stroke: -1px transparent;
                 }                
 	</style>
 </head>
 <body>
 	<!--<div id="wallpaper"></div-->
 	<div class="menublocks" id="blockleft">
-		<div class="menuitem menuleft" id="one"><span>Tathva '12</span></div>
-		<div class="menuitem menuleft" id="two"><span>Gallery</span></div>
-		<div class="menuitem menuleft" id="three"><div class="hello"></div><span>Previous Sponsors</span></div>
+		<div class="menuitem menuleft" id="one">Tathva 2012</div>
+		<div class="menuitem menuleft" id="two">Gallery</div>
+		<div class="menuitem menuleft" id="three"><div class="hello"></div>Previous Sponsors</div>
 	</div>
 	<div class="menublocks" id="blockright">
 		<div class="menuitem menuright" id="four">Contact Us</div>
 		<div class="menuitem menuright" id="five">Brochure</div>
-		<div class="menuitem menuright" id="six">Why Sponsor Us</div>
+		<div class="menuitem menuright" id="six">Why Sponsor Us?</div>
 	</div>
-	<div class="content" id="cone">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+	<div class="content" id="cone"> <!--Tathva '12-->
+		<div class="textheader">
+			Tathva 2012	
+		</div>
+		<div class="textcontent"></div>
+	</div>
 	<div class="content" id="ctwo">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+		<div class="textheader">Gallery</div>
+		<div class="textcontent">This is the motherfuckin' shit yo!</div>
+	</div>
 	<div class="content" id="cthree">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+		<div class="textheader">Previous Sponsors</div>
+		<div class="textcontent"><img src="sponsors.jpg"></img></div>
+	</div>
 	<div class="content" id="cfour">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+		<div class="textheader">Contact Us</div>
+		<div class="textcontent">
+			<div><h1>Marketing</h1></div>
+			<div>
+				<div class="contact"><h2>Jaunty K</h2><h3>9645506607</h3></div>
+				<div class="contact"><h2>Christopher Jacob</h2><h3>123456789</h3></div>
+			</div>
+			<div>
+				<div class="contact"><h2>Nihadh Muneer</h2><h3>9645506607</h3></div>
+				<div class="contact"><h2>Akhil Raj K</h2><h3>9645506607</h3></div>
+			</div>
+			<div><span><h1>Public Relations</h1></span></div>
+			<div>
+				<div class="contact"><h2>Deepak Thomas</h2><h3>9645506607</h3></div>
+				<div class="contact"><h2>Shamil</h2><h3>9645506607</h3></div>
+			</div>
+		</div>
+	</div>
 	<div class="content" id="cfive">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+		<div class="textheader">Brochure</div>
+		<div class="textcontent"></div>
+	</div>
 	<div class="content" id="csix">
-		<div class="textheader"></div>
-		<div class="textcontent"></div></div>
+		<div class="textheader">Why Sponsor Us?</div>
+		<div class="textcontent"></div>
+	</div>
 </div>
 	<div id="top">
 		<div id="overfooter"></div>
