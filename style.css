@@ -263,6 +263,7 @@ h3
 	float:left;
 	width:180px;
 	height:100%;
+	cursor: pointer;
 }
 #super
 {
