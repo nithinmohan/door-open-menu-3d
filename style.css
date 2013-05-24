@@ -86,7 +86,7 @@ body
 	width:96%;
 	background-color:none;
 	position:relative;
-	font-size:30px;
+	font-size:230%;
 	opacity:1.0;
 	height:8%;
 	border-radius:10px; 
@@ -104,8 +104,8 @@ body
 	height:83%;
 	border-radius:10px; 
 	color:white;
-
 }
+
 .menublocks
 {
 	width:26%;
