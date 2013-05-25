@@ -1,81 +1,86 @@
 a {
-  text-decoration:none;
+	text-decoration:none;
 }
- @font-face {
-  font-family: "tathva";
-  src: url(tathva.ttf) format("truetype");
-            }
+@font-face {
+	font-family: "tathva";
+	src: url(fonts/tathva.ttf) format("truetype");
+}
 body
 {
-	background-image: url(bg.jpg);  
+	background-image: url(images/bg.jpg);  
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
 }
 
 #wallpaper
- {
-  position:absolute;
-  width:0%;
-  height:0%;
-  top:50%;
-  left:50%;
-  background-color:white;
-  z-index:-1;
-  border-radius: 50%;
-  box-shadow:0px 0px 1500px 200px rgba(255,255,255,0.3);
- }
+{
+	position:absolute;
+	width:0%;
+	height:0%;
+	top:50%;
+	left:50%;
+	background-color:white;
+	z-index:-1;
+	border-radius: 50%;
+	box-shadow:0px 0px 1500px 200px rgba(255,255,255,0.3);
+}
 
 /*Header - Tathva - Start*/
 
 #top
- {
-  background-image: url(footer.jpg);
-  position:absolute;
-  left:0px;
-  display:inline;
-  width:100%;
-  bottom:0px;
-  height: auto;
-  /*border-top: 10px solid #056000;*/
- }
+{
+	background-image: url(images/footer.jpg);
+	position:absolute;
+	left:0px;
+	width:100%;
+	bottom:0px;
+	height: auto;
+	/*border-top: 10px solid #056000;*/
+}
 #overfooter
- {
- 	background-image:url(overfooter.jpg);
- 	width:100%;
- 	height:10px;
- }
+{
+	background-image:url(images/overfooter.jpg);
+	width:100%;
+	height:10px;
+}
 #title
- {
-  font-style:"tathva";
-  color:#DDDDEE;
-  height:15%;
-  margin-left:37%;
-  margin-right:37%;
- }
+{
+	font-style:"tathva";
+	color:#DDDDEE;
+	height:90px;
+	margin-left:37%;
+}
+#logodate
+{
+	float: left;
+}
 #tat 
 {
-  font-size:500%;
-  padding-top: 1%;
-  cursor:pointer;
-  -webkit-text-stroke-width:1px;
-  -webkit-text-stroke-color:black;
+	position: relative;
+	top: -10px;
+	font-size:600%;
+	cursor:pointer;
+	-webkit-text-stroke-width:1px;
+	-webkit-text-stroke-color:black;
 }
 #tat:hover
- {
-  text-shadow: 0px 0px 25px #DDDFFF;
-  color:#FFFFFF;
- }
+{
+	text-shadow: 0px 0px 25px #DDDFFF;
+	color:#FFFFFF;
+}
 #logo
- {
-  float:left;
-  height:15%;
- }
+{
+	float:left;
+	height:90%;
+}
 #date
- {
-  clear:none;
-  font-size:100%;
- }
+{
+	position: relative;
+	clear:none;
+	font-size:100%;
+	top: 0px;
+}
 
 /*Header - Tathva - End*/
 
@@ -119,14 +124,14 @@ body
 	-webkit-transform: perspective(300) rotateY(0deg); 
 }
 .menublocks>div:last-child
- {
+{
 	border-bottom:0px;
 	font-size: 90%;
- }
+}
 span
- {
- 	opacity:1;
- }
+{
+	opacity:1;
+}
 #blockleft
 {
 	float: left;
@@ -147,7 +152,7 @@ span
 .menuitem
 {
 	border-bottom:2px dashed #AAAAAA;
-	background-image: url("footer.jpg"); 
+	background-image: url("images/footer.jpg"); 
 	position:relative;
 	padding: 10%;
 	height: 9%;
@@ -175,12 +180,13 @@ span
 	-webkit-filter:blur(0px);
 	border-bottom:0px;
 	cursor: pointer;
-	z-index: 1;
+	z-index: 1;/* other wise others will tile over this*/
 	-webkit-transform: perspective(300) translateZ(70px);
 	-webkit-box-shadow: -10px 5px 50px 6px #000;
 }
 .content
 {
+	visibility: hidden;
 	opacity: 0;
 	position:absolute;
 	top:50%;
@@ -191,7 +197,7 @@ span
 }
 .selected
 {
-	
+	visibility:visible;
 	overflow: hidden;
 	top:0;
 	position:absolute;
@@ -199,58 +205,54 @@ span
 	width:56%;
 	height:80%;
 	border-radius: 25px;
-	opacity:0.9;
 	-webkit-transition:all .7s ease-in-out;
+	opacity:0.8;
 	background-color: black;
 }
-.selected #ctwo
- {
- 	opacity:1;
- }
 .textcontent>img
- {
- 	width:100%;
- 	height:100%;
- 	/*margin-left:1000px;*/
- }
- .textcontent>div
-  {
-  	margin:auto 1%;
-  	width:100%;
-  	text-align:center;
-  	height:auto;
-  }
+{
+	width:100%;
+	height:100%;
+	/*margin-left:1000px;*/
+}
+.textcontent>div
+{
+	margin:auto 1%;
+	width:100%;
+	text-align:center;
+	height:auto;
+}
 .contact
- {
- 	width:auto;
- 	float:left;
- 	width:50%;
- }
+{
+	width:auto;
+	float:left;
+	width:50%;
+}
 h1
- {
- 	font-size:110%;
- 	margin:auto;
- 	margin-bottom: 3%
- }
+{
+	font-size:110%;
+	margin:auto;
+	margin-bottom: 3%
+}
 h2
- {
- 	font-size:90%;
- 	margin:auto;
- }
+{
+	font-size:90%;
+	margin:auto;
+}
 h3
- {
- 	margin:auto;
- 	font-size:80%;
- 	margin-bottom: 5%
- }
+{
+	margin:auto;
+	font-size:80%;
+	margin-bottom: 5%
+}
 
- /*Gallery*/
+/*Gallery*/
 .thumbs
 {	
-	border-top: 
+	border-top: 0px;
 	bottom:0px;
 	margin-left:0px;
-	width:1800px;
+	width:5760px;
 	height:100px;
 	cursor:pointer;
 }
@@ -259,6 +261,7 @@ h3
 	float:left;
 	width:180px;
 	height:100%;
+	cursor: pointer;
 }
 #super
 {
@@ -272,36 +275,67 @@ h3
 }
 #container
 {
-	margin-top:20px;
-	margin:auto;
 	z-index: 1;
-	width:auto;
+	width:100%;
 	height:400px;
 	-webkit-transform: perspective(300) rotateY(0deg);
 	-webkit-transform-style: preserve-3d;	
 	-webkit-transition:all 1s ease;
 }
+.back
+{
+	opacity: 0;
+	-webkit-transition:all 1s ease;
+}
+.front
+{
+	opacity: 1;
+	-webkit-transition:all 1s ease;
+}
 #container>img
 {
-	 border:1px solid #021a40;
-	  padding:4px;
-     background-color:black;
-	position: absolute;
-	width: auto;
+	border:1px solid #021a40;
+	padding:4px;
+	background-color:white;
+	width:80%;
 	height: 100%;
+	margin-left: 10%;
 }
-.back
- {
- 	opacity:0;
- }
-#container>#two
+#container>#twop
 {
 	position: absolute;
 	top:0px;
 	left: 0px;
-	width: 100%;
+	width:80%;/*for smooth transition when gallery will hide(after odd number of clicks)*/
 	height: 100%;
-	-webkit-transition:all 1s ease-in-out;
 	-webkit-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
 }
+#back
+{
+	pointer-events:none;
+	position: absolute;
+	background: url("images/gallery/prev.png")  no-repeat;
+	top:40%;
+	margin-left: 0px;
+	width: 4%;
+	height: 6%;
+	cursor: pointer;
+	z-index: 3;
+}
+#next
+{
+	pointer-events:none;
+	position: absolute;
+	background: url("images/gallery/next.png") no-repeat;
+	top: 40%;
+	right: 0px;
+	width: 4%;
+	height: 6%;
+	cursor: pointer;
+	z-index: 4;
+}
 /* Gallery End*/
+.hide
+{
+	opacity: 0;
+}
