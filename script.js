@@ -21,9 +21,10 @@ $(".menuitem").mouseenter(function(){comefor(this);});
 $(".menuitem").mouseleave(comeback);
 $(".menuitem").click(function()
 {
+	$(".main").addClass("hide");
 	if((cur_selected!=this)||(ishome==1))
 	{
-		ishome=0;
+	ishome=0;
 	old_selected=cur_selected;
 	$("#c"+$(old_selected).attr("id")).removeClass("selected");
 	cur_selected=this;
@@ -34,6 +35,8 @@ $(".menuitem").click(function()
 }
 });
 $(".home").click(function(){
+
+	$(".main").removeClass("hide");
 	initial_state();
 	comeback();
 	$(".content").removeClass("selected");
@@ -46,7 +49,7 @@ function addimage(number)
         		var limit=number;
         		for(num=1;num<=limit;num++)
         		{
-       	 		inhtml='<img src=\"images/thumbs/'+num+'.jpg\""/></img';
+       	 		inhtml='<img src=\"images/gallery/thumbs/'+num+'.jpg\""/></img';
        	 		$("#thumbslist").append(inhtml);
        	 		}
         	}
@@ -54,6 +57,10 @@ function set_thumbs(no_of_thumbs,thumb_width)
 {
 	 $(".thumbs").attr("width",thumb_width*no_of_thumbs);
 	  addimage(no_of_thumbs);
+}
+function next_pic()
+{
+	
 }
 $("#two").click(function(){
 	set_thumbs(32,180);
