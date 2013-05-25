@@ -21,7 +21,7 @@ $(".menuitem").mouseenter(function(){comefor(this);});
 $(".menuitem").mouseleave(comeback);
 $(".menuitem").click(function()
 {
-	$(".main").addClass("hide");
+	/*$(".main").fadeOut(2000);*/
 	if((cur_selected!=this)||(ishome==1))
 	{
 	ishome=0;
@@ -36,7 +36,7 @@ $(".menuitem").click(function()
 });
 $(".home").click(function(){
 
-	$(".main").removeClass("hide");
+	/*$(".main").fadeIn(2000);*/
 	initial_state();
 	comeback();
 	$(".content").removeClass("selected");
