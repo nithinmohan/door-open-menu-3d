@@ -84,6 +84,19 @@ body
 
 /*Header - Tathva - End*/
 
+
+/*`*/
+
+.main
+ {
+ 	margin:2% 4%;
+ 	width:40%;
+ 	height: 65%;
+ 	float:left;
+
+ }
+
+/*Content*/
 .textheader
 {
 	text-align:center;
@@ -205,6 +218,7 @@ span
 	width:56%;
 	height:80%;
 	border-radius: 25px;
+	-webkit-transition:all .7s ease-in-out;
 	opacity:0.8;
 	background-color: black;
 }
@@ -406,3 +420,4 @@ h3
 		float: right;
 	}
 /* for contact*/
+
