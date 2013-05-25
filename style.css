@@ -1,10 +1,10 @@
 a {
-  text-decoration:none;
+	text-decoration:none;
 }
- @font-face {
-  font-family: "tathva";
-  src: url(tathva.ttf) format("truetype");
-            }
+@font-face {
+	font-family: "tathva";
+	src: url(fonts/tathva.ttf) format("truetype");
+}
 body
 {
 	background-image: url(images/bg.jpg);  
@@ -14,68 +14,73 @@ body
 }
 
 #wallpaper
- {
-  position:absolute;
-  width:0%;
-  height:0%;
-  top:50%;
-  left:50%;
-  background-color:white;
-  z-index:-1;
-  border-radius: 50%;
-  box-shadow:0px 0px 1500px 200px rgba(255,255,255,0.3);
- }
+{
+	position:absolute;
+	width:0%;
+	height:0%;
+	top:50%;
+	left:50%;
+	background-color:white;
+	z-index:-1;
+	border-radius: 50%;
+	box-shadow:0px 0px 1500px 200px rgba(255,255,255,0.3);
+}
 
 /*Header - Tathva - Start*/
 
 #top
- {
-  background-image: url(images/footer.jpg);
-  position:absolute;
-  left:0px;
-  display:inline;
-  width:100%;
-  bottom:0px;
-  height: auto;
-  /*border-top: 10px solid #056000;*/
- }
+{
+	background-image: url(images/footer.jpg);
+	position:absolute;
+	left:0px;
+	width:100%;
+	bottom:0px;
+	height: auto;
+	/*border-top: 10px solid #056000;*/
+}
 #overfooter
- {
- 	background-image:url(images/overfooter.jpg);
- 	width:100%;
- 	height:10px;
- }
+{
+	background-image:url(images/overfooter.jpg);
+	width:100%;
+	height:10px;
+}
 #title
- {
-  font-style:"tathva";
-  color:#DDDDEE;
-  height:15%;
-  margin-left:37%;
-  margin-right:37%;
- }
+{
+	font-style:"tathva";
+	color:#DDDDEE;
+	height:90px;
+	margin-left:37%;
+}
+#logodate
+{
+	float: left;
+}
 #tat 
 {
-  font-size:500%;
-  padding-top: 1%;
-  cursor:pointer;
-  -webkit-text-stroke-width:1px;
-  -webkit-text-stroke-color:black;
+	position: relative;
+	top: -10px;
+	font-size:600%;
+	cursor:pointer;
+	-webkit-text-stroke-width:1px;
+	-webkit-text-stroke-color:black;
 }
 #tat:hover
- {
-  text-shadow: 0px 0px 25px #DDDFFF;
-  color:#FFFFFF;
- }
+{
+	text-shadow: 0px 0px 25px #DDDFFF;
+	color:#FFFFFF;
+}
 #logo
- {
-  float:left;
-  height:15%;
- }
+{
+	float:left;
+	height:90%;
+}
 #date
- {
-  clear:none;
-  font-size:100%;
- }
+{
+	position: relative;
+	clear:none;
+	font-size:100%;
+	top: 0px;
+}
 
 /*Header - Tathva - End*/
 
@@ -119,14 +124,14 @@ body
 	-webkit-transform: perspective(300) rotateY(0deg); 
 }
 .menublocks>div:last-child
- {
+{
 	border-bottom:0px;
 	font-size: 90%;
- }
+}
 span
- {
- 	opacity:1;
- }
+{
+	opacity:1;
+}
 #blockleft
 {
 	float: left;
@@ -204,43 +209,43 @@ span
 	background-color: black;
 }
 .textcontent>img
- {
- 	width:100%;
- 	height:100%;
- 	/*margin-left:1000px;*/
- }
- .textcontent>div
-  {
-  	margin:auto 1%;
-  	width:100%;
-  	text-align:center;
-  	height:auto;
-  }
+{
+	width:100%;
+	height:100%;
+	/*margin-left:1000px;*/
+}
+.textcontent>div
+{
+	margin:auto 1%;
+	width:100%;
+	text-align:center;
+	height:auto;
+}
 .contact
- {
- 	width:auto;
- 	float:left;
- 	width:50%;
- }
+{
+	width:auto;
+	float:left;
+	width:50%;
+}
 h1
- {
- 	font-size:110%;
- 	margin:auto;
- 	margin-bottom: 3%
- }
+{
+	font-size:110%;
+	margin:auto;
+	margin-bottom: 3%
+}
 h2
- {
- 	font-size:90%;
- 	margin:auto;
- }
+{
+	font-size:90%;
+	margin:auto;
+}
 h3
- {
- 	margin:auto;
- 	font-size:80%;
- 	margin-bottom: 5%
- }
+{
+	margin:auto;
+	font-size:80%;
+	margin-bottom: 5%
+}
 
- /*Gallery*/
+/*Gallery*/
 .thumbs
 {	
 	border-top: 
@@ -290,7 +295,7 @@ h3
 {
 	border:1px solid #021a40;
 	padding:4px;
-    background-color:white;
+	background-color:white;
 	width:80%;
 	height: 100%;
 	margin-left: 10%;
