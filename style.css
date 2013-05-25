@@ -84,6 +84,19 @@ body
 
 /*Header - Tathva - End*/
 
+
+/*Main*/
+
+#main
+ {
+ 	margin:2% 4%;
+ 	width:40%;
+ 	height: 65%;
+ 	float:left;
+
+ }
+
+/*Content*/
 .textheader
 {
 	text-align:center;

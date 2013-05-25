@@ -74,7 +74,7 @@ $(".thumbs").mousemove(function(e){
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
 		newmar=relative_pos*largewidth/smallwidth;
-		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',easing: 'easeOutBack'});
+		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',easing: 'easeOutSine'});
 	});
 	k=180;
 	var src;
