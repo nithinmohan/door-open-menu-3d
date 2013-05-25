@@ -43,6 +43,14 @@ $(".home").click(function(){
 	$(".menublocks").mouseleave(initial_state);
 	ishome=1;
 });
+$(document).keyup(function(event){
+		if(event.which==27)
+			$(".home").trigger("click");
+});
+//gallery
+k=0;
+var no_of_thumbs=32;
+var src=$("#onep").attr("src");
 function addimage(number)
         	{
         		var limit=number;
@@ -57,10 +65,41 @@ function set_thumbs(no_of_thumbs,thumb_width)
 	 $(".thumbs").attr("width",thumb_width*no_of_thumbs);
 	  addimage(no_of_thumbs);
 }
+showimage=function(location,dir){
+		if(src!=location)
+		{
+		k=k+dir*180;
+		src=location;
+		srcarray=src.split('/');
+		$("#container>.back").attr("src",'images/gallery/pictures/'+srcarray[3]);
+		$("#container").css({"-webkit-transform":"perspective(600) rotateY("+k+"deg)"});
+		$("#container>img").toggleClass("back front");
+		}};
 $("#two").click(function(){
 	set_thumbs(32,180);
 });
-
+$("#next").click(function(){
+	srcarray=src.split('/');
+	namearray=srcarray[3].split('.');
+	num=parseInt(namearray[0])+1;
+	if(num<=no_of_thumbs)
+	showimage('images/gallery/pictures/'+num+".jpg",1);
+});
+$("#back").click(function(){
+	srcarray=src.split('/');
+	namearray=srcarray[3].split('.');
+	num=parseInt(namearray[0])-1;
+	if(num>0)
+	showimage('images/gallery/pictures/'+num+".jpg",-1);
+});
+$(document).keyup(function(event){
+		if(event.which==37)
+			$("#back").trigger("click");
+});
+$(document).keyup(function(event){
+		if(event.which==39)
+			$("#next").trigger("click");
+});
        
 $(".thumbs").mousemove(function(e){
 		position=e.pageX;
@@ -71,17 +110,8 @@ $(".thumbs").mousemove(function(e){
 		newmar=relative_pos*largewidth/smallwidth;
 		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',easing: 'easeOutBack'});
 	});
-	k=180;
-	var src;
-	$(".thumbs>img").live("click",function(){
-		if(src!=$(this).attr("src"))
-		{
-		src=$(this).attr("src")
-		srcarray=src.split('/');
-		$("#container>.back").attr("src",'images/gallery/pictures/'+srcarray[3]);
-		$("#container").css({"-webkit-transform":"perspective(600) rotateY("+k+"deg)"});
-		$("#container>img").toggleClass("back front");
-		k=k+180;
-		}
-	});
+	
+$(".thumbs>img").live("click",function(){
+		showimage($(this).attr("src"),1);
+});
 });

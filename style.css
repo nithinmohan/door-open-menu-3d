@@ -175,7 +175,7 @@ span
 	-webkit-filter:blur(0px);
 	border-bottom:0px;
 	cursor: pointer;
-	z-index: 1;
+	z-index: 1;/* other wise others will tile over this*/
 	-webkit-transform: perspective(300) translateZ(70px);
 	-webkit-box-shadow: -10px 5px 50px 6px #000;
 }
@@ -300,9 +300,33 @@ h3
 	position: absolute;
 	top:0px;
 	left: 0px;
-	width:80%;/*for smooth transition when gallery will hide(after odd clicks)*/
+	width:80%;/*for smooth transition when gallery will hide(after odd number of clicks)*/
 	height: 100%;
 	-webkit-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
+}
+#back
+{
+	pointer-events:none;
+	position: absolute;
+	background: url("images/gallery/prev.png")  no-repeat;
+	top:40%;
+	margin-left: 0px;
+	width: 4%;
+	height: 6%;
+	cursor: pointer;
+	z-index: 3;
+}
+#next
+{
+	pointer-events:none;
+	position: absolute;
+	background: url("images/gallery/next.png") no-repeat;
+	top: 40%;
+	right: 0px;
+	width: 4%;
+	height: 6%;
+	cursor: pointer;
+	z-index: 4;
 }
 /* Gallery End*/
 .hide
