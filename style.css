@@ -21,9 +21,9 @@ body
 	z-index:0;
 }
 
-/*Header - Tathva - Start*/
+/*Footer - Tathva - Start*/
 
-#top
+#footer
 {
 	background-image: url(images/footer.jpg);
 	position:absolute;
@@ -31,20 +31,46 @@ body
 	width:100%;
 	bottom:0px;
 	height: auto;
-	/*border-top: 10px solid #056000;*/
 }
 #overfooter
 {
 	background-image:url(images/overfooter.jpg);
 	width:100%;
 	height:10px;
+	position:absolute;
+	top:0px;
+	opacity:0.8;
 }
+#underfooter
+{
+	position:absolute;
+	background-image:url(images/underfooter.jpg);
+	width:100%;
+	height:10px;
+	bottom:0px;
+	opacity:0.8;
+}
+#nitc
+ {
+ 	height:90px;
+ 	width:auto;
+ 	float:left;
+ 	margin-top: 20px;
+ 	margin-left: 20px;
+
+ }
+#nitc-info
+ {
+ 	float:left;
+ 	margin-left:20px;
+ }
 #title
 {
 	font-style:"tathva";
 	color:#DDDDEE;
 	height:90px;
 	margin-left:37%;
+	margin-top:10px;
 }
 #logodate
 {
@@ -54,7 +80,7 @@ body
 {
 	position: relative;
 	top: -10px;
-	font-size:600%;
+	font-size:500%;
 	cursor:pointer;
 	-webkit-text-stroke-width:1px;
 	-webkit-text-stroke-color:black;
@@ -64,7 +90,7 @@ body
 	text-shadow: 0px 0px 25px #DDDFFF;
 	color:#FFFFFF;
 }
-#logo
+.logo
 {
 	float:left;
 	height:90%;
@@ -77,10 +103,7 @@ body
 	top: 0px;
 }
 
-/*Header - Tathva - End*/
-
-
-/*`*/
+/*Footer - Tathva - End*/
 
 .main
  {
@@ -120,10 +143,11 @@ body
 	color:white;
 }
 
+/*Menu*/
 .menublocks
 {
 	width:26%;
-	color:white;
+	color:#00AFFF;
 	position: relative;
 	font-size: 35px;
 	opacity: 0.8;
@@ -135,10 +159,6 @@ body
 {
 	border-bottom:0px;
 	font-size: 90%;
-}
-span
-{
-	opacity:1;
 }
 #blockleft
 {
@@ -343,10 +363,6 @@ h3
 	z-index: 4;
 }
 /* Gallery End*/
-.hide
-{
-	opacity: 0;
-}
 
 .container {display: table; height: 100%; position:absolute; overflow: hidden;width:100%;}
 .helper {#position: absolute; top: 50%;display: table-cell; vertical-align: middle;}
