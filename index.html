@@ -1,8 +1,3 @@
-<!--
-1. Put pics for menus
-2.add content for Tathva '13, Tathva '12, Brochure, Why Sponsor us?
-5. Add Credits
--->
 <html>
 <head>
 	<title>Tathva 2013</title>
@@ -20,21 +15,26 @@
 		src: url(fonts/nexa-l.otf);
 	}
 	@font-face {
-		font-family: "ubuntu";
-		src: url(fonts/ubuntu.ttf) format("truetype");
+		font-family: "intro";
+		src: url(fonts/intro.otf);
+	}
+	@font-face {
+		font-family: "cabin";
+		src: url(fonts/cabin.otf);
 	}
 	#title { 
 		font-family: "tathva";
-	}
-	.textcontent { 
-		font-family: "nexa-light";
-	}           
+	}         
 	.textheader,h1 { 
-		font-family: "ubuntu";
+		font-family: "cabin";
 	}           
 	.menublocks { 
 		font-family: "nexa-light";
 	}                
+	.textcontent,#footer
+	 {
+	 	font-family:"Gill Sans MT";
+	 }
 	</style>
 </head>
 <body>
@@ -69,8 +69,10 @@
 	</div>
 <!--Main-->	
 	<div class="main">
-		<div class="textheader" style="color:black">Tathva 2013</div>
-		<div class="textcontent" style="color:black;background-color:#CCCCCC;"></div>
+		<!--div class="textheader" style="color:black">Tathva 2013</div-->
+		<div class="textcontent" style="color:black;background-color:#CCCCCC;">
+			The month of October brings with it the tidings of <b>Tathva, the Techno-Management festival at NIT Calicut</b>. Technology par excellence- the whole aim of Tathva 13, comes with a whole range of innovative events lined up and promises to be bigger than before. Thoroughly challenged at every level, worthy winners will carry away with them the prize money amounting to Rs 18 lakhs. Get a piece of the valuable experience of experts in the field of technology at the Lectures. At Workshops, receive hands-on practical knowledge from the visiting dignitaries. A wide range of exciting exhibits from all over the world await your arrival at the Tathva Exhibitions. From having fun filled breaks at the Informals stall and cooling off at the Tech Nites to living in the virtual world at The Gaming Arena and getting high with enthusiasm at the Wheels- the automobile exhibition, Tathva 13 has a lot to offer. <b>With an expected total turnout of 10000 emerging engineers and managers, this Tathva promises huge exposure to your brand.</b>
+		</div>
 	</div>
 <!--Right-->
 	<div class="menublocks" id="blockright">
@@ -126,18 +128,16 @@
 		<div class="textcontent">
 			<div><h1>Marketing</h1></div>
 			<div>
-				<div class="contact"><h2>Akhil Raj K</h2><h3>9400792002</h3></div>
-				<div class="contact"><h2>Jaunty K</h2><h3>9645506607</h3></div>
+				<div class="contact mar"><h2>Akhil Raj K</h2><h3>9400792002</h3></div>
+				<div class="contact mar"><h2>Jaunty K</h2><h3>9645506607</h3></div>
+				<div class="contact mar"><h2>Christopher Jacob</h2><h3>9846095751</h3></div>
+				<div class="contact mar"><h2>Nihadh Muneer</h2><h3>9946932014</h3></div>
 			</div>
+			<div><span></br><h1>Public Relations</h1></span></div>
 			<div>
-				<div class="contact"><h2>Christopher Jacob</h2><h3>9846095751</h3></div>
-				<div class="contact"><h2>Nihadh Muneer</h2><h3>9946932014</h3></div>
-			</div>
-			<div><span><h1>Public Relations</h1></span></div>
-			<div>
-				<div class="contact"><h2>Deepak Thomas</h2><h3>9447677626</h3></div>
-				<div class="contact"><h2>Shamil P</h2><h3>9633425202</h3></div>
-				<div class="contact" style="margin-left:25%"><h2>Shahul Hameed</h2><h3>9961666458</h3></div>
+				<div class="contact pr"><h2>Shamil P</h2><h3>9633425202</h3></div>
+				<div class="contact pr"><h2>Deepak Thomas</h2><h3>9447677626</h3></div>
+				<div class="contact pr"><h2>Shahul Hameed</h2><h3>9961666458</h3></div>
 			</div>
 		</div>
 	</div>
@@ -147,9 +147,22 @@
 	</div>
 	<div class="content" id="csix">
 		<div class="textheader">Why Sponsor Us?</div>
-		<div class="textcontent"></div>
+		<div class="textcontent">
+			Tathva is a three day fete held in October and is attended by a footfall of over 50,000 students from top notch educational institutions. It provides an excellent platform for the students to showcase their technical and managements skills. Tathva is attended by technical enthusiasts, local visitors and students. The sponsors get the following benefits:
+			<ul>
+				<li>-Increase in brand visibility.</li>
+				<li>-Student Interaction and product marketing.</li>
+				<li>-Banners and posters will be put up in the Open Air Theatre and other prominent locations in the campus.</li>
+				<li>-Kiosks and stalls will also be allowed in various parts of the campus.</li>
+				<li>-Have the opportunity to distribute marketing materials and/or product samples. </li>
+				<li>-Be listed on the official event web site and receive a link to your company web site.</li>
+				<li>-Receive an enlarged logo on the back of the official event T-shirt.</li>
+				<li>-Have your enlarged logo appear on all press-printed materials including fliers or brochures and on all web ads.</li>
+			</ul>
+		</div>
 	</div>
 </div>
+<!--------------------------Footer-------------------------------------->
 <div id="footer">
 	<div id="overfooter"></div>
 	<div id="nitc">
@@ -171,7 +184,9 @@
 	<div id="links">
 		<a href="http://www.facebook.com/nitc.tathva" id="fb"><img src="images/fb.png" class="logo"></img></a>
 		<a href="https://twitter.com/tathva" id="tw"><img src="images/tw.png" class="logo"></img></a>
-        <a href="http://www.youtube.com/user/Tathva12" id="yt"><img src="images/yt.png" class="logo"></img></a>
+<!--        <a href="http://www.youtube.com/user/Tathva12" id="yt"><img src="images/yt.png" class="logo"></img></a>-->
+	</div>
+	<div id="credits">
 	</div>
 </div>
 <!--Added script files here-->
@@ -180,3 +195,10 @@
 <script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>
+<!--
+1. Put pics for menus
+2.add content for Tathva '12, Brochure
+3.reduce pics size
+4.Add favicon
+5. Add Credits
+-->

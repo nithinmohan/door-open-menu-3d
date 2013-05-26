@@ -70,6 +70,7 @@ body
  {
  	float:left;
  	margin-left:20px;
+ 	margin-top: -5px;
  }
 #title
 {
@@ -125,7 +126,7 @@ body
  {
  	margin:2% 4%;
  	width:40%;
- 	height: 65%;
+ 	height: 75%;
  	float:left;
 
  }
@@ -148,15 +149,17 @@ body
 }
 .textcontent
 {	
+	padding: 2%;
 	margin-left:2%; 
 	margin-top: 2%;
-	width:96%;
+	width:92%;
 	background-color:#111111;
 	position:relative;
-	font-size:30px;
-	height:83%;
+	height:78%;
 	border-radius:10px; 
 	color:white;
+	font-size:100%;
+	text-align:justify;
 }
 
 /*Menu*/
@@ -217,7 +220,7 @@ body
 }
 .blur
 {
-	-webkit-filter:blur(1.5px);
+	-webkit-filter:blur(2px);
 }
 .menuhover
 {
@@ -270,23 +273,30 @@ body
 {
 	width:auto;
 	float:left;
-	width:50%;
 }
+.mar
+ {
+	width:25%;
+ }
+.pr
+ {
+ 	width:33%;
+ }
 h1
 {
-	font-size:110%;
+	font-size:150%;
 	margin:auto;
 	margin-bottom: 3%
 }
 h2
 {
-	font-size:90%;
+	font-size:120%;
 	margin:auto;
 }
 h3
 {
 	margin:auto;
-	font-size:80%;
+	font-size:100%;
 	margin-bottom: 5%
 }
 
