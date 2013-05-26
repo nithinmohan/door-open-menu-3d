@@ -14,6 +14,7 @@ selected_state=function()
 comefor=function(elem){$(".menuitem").removeClass("menuhover");$(elem).addClass("menuhover");}//for forwarding hovered menuitem and setting its blur zero
 comeback=function(){$(".menuitem").removeClass("menuhover");}//setting menu hover effect to zero for all menuitems
 $(document).ready(function() {
+	$(window).load(function() {$("#welcome").fadeOut('fast'); })
 	$("#creditsbox").hide();
 	$("#credits").click(function()
 	{
