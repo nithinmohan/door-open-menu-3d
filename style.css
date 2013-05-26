@@ -353,6 +353,7 @@ h3
 	width:80%;/*for smooth transition when gallery will hide(after odd number of clicks)*/
 	height: 100%;
 	-webkit-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
+
 }
 #back
 {
@@ -365,9 +366,11 @@ h3
 	height: 6%;
 	cursor: pointer;
 	z-index: 3;
+	opacity:0;
 }
 #next
 {
+	opacity:0;
 	pointer-events:none;
 	position: absolute;
 	background: url("images/gallery/next.png") no-repeat;
@@ -379,6 +382,10 @@ h3
 	z-index: 4;
 }
 /* Gallery End*/
+.hide
+ {
+ 	opacity:0;
+ }
 
 .container1 {display: table; height: 100%; position:absolute; overflow: hidden;width:100%;}
 .helper {#position: absolute; top: 50%;display: table-cell; vertical-align: middle;}
