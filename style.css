@@ -1,6 +1,11 @@
 a {
 	text-decoration:none;
+	color:white;
 }
+a:hover
+ {
+ 	color:cyan;
+ }
 @font-face {
 	font-family: "tathva";
 	src: url(fonts/tathva.ttf) format("truetype");
@@ -31,6 +36,8 @@ body
 	width:100%;
 	bottom:0px;
 	height: auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:white;
 }
 #overfooter
 {
@@ -69,8 +76,11 @@ body
 	font-style:"tathva";
 	color:#DDDDEE;
 	height:90px;
-	margin-left:37%;
+	margin-left:20%;
 	margin-top:10px;
+	width:36%;
+	margin-right: 0px;
+	float:left;
 }
 #logodate
 {
@@ -102,6 +112,12 @@ body
 	font-size:100%;
 	top: 0px;
 }
+#links
+ {
+ 	float:right;
+ 	height:90px;
+ 	margin-top:20px;
+ }
 
 /*Footer - Tathva - End*/
 
@@ -364,6 +380,6 @@ h3
 }
 /* Gallery End*/
 
-.container {display: table; height: 100%; position:absolute; overflow: hidden;width:100%;}
+.container1 {display: table; height: 100%; position:absolute; overflow: hidden;width:100%;}
 .helper {#position: absolute; top: 50%;display: table-cell; vertical-align: middle;}
 .content1 {position: relative; top: -50%;margin:0 auto;width:100%;}

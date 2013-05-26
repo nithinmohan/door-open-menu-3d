@@ -60,7 +60,7 @@ function set_thumbs(no_of_thumbs,thumb_width)
 }
 function next_pic()
 {
-	
+
 }
 $("#two").click(function(){
 	set_thumbs(32,180);
