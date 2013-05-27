@@ -60,7 +60,7 @@ body
 #nitc
  {
  	height:90px;
- 	width:auto;
+ 	width:220px;
  	float:left;
  	margin-top: 20px;
  	margin-left: 20px;
@@ -145,7 +145,6 @@ body
 	height:8%;
 	border-radius:10px; 
 	color:white;
-	/*border-radius-top-right:5px; */
 }
 .textcontent
 {	
@@ -171,7 +170,14 @@ body
 	font-size: 35px;
 	opacity: 0.8;
 	height:auto;
+	transition:all .3s ease-in-out;
 	-webkit-transition:all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	transform: perspective(300) rotateY(0deg); 
+	transformmoz perspective(300) rotateY(0deg); 
+	-ms-transform: perspective(300) rotateY(0deg); 
+	-ms-transform: mozctive(300) rotateY(0deg); 
+	-moz-transform: perspective(300) rotateY(0deg); 
 	-webkit-transform: perspective(300) rotateY(0deg); 
 }
 .menublocks>div:last-child
@@ -184,16 +190,18 @@ body
 	float: left;
 	top:40px;
 	left: 40px;
-	-webkit-transform-origin-x: 0%;
-	-webkit-transform-origin-y: 50%;
+	transform-origin: 0% 50%;
+	-ms-transform-origin: 0% 50%;
+	-webkit-transform-origin: 0% 50%;
 }
 #blockright
 {
 	float: right;
 	top: 40px;
 	right: 40px;
-	-webkit-transform-origin-x: 100%;
-	-webkit-transform-origin-y: 50%;
+	transform-origin: 100% 50%;
+	-webkit-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
 	text-align:right;
 }
 .menuitem
@@ -203,19 +211,27 @@ body
 	position:relative;
 	height: 19%;
 	width:100%;
+	transition:all .3s ease-in-out;
 	-webkit-transition:all .3s ease-in-out;
-	z-index: 0;	
+	-moz-transition:all .3s ease-in-out;
+	transform-origin: 50% 50%;
+	transform-mozigin: 50% 50%;
 	-webkit-transform: perspective(300) translateZ(0px);
-	-webkit-transform-origin-x: 50%;
-	-webkit-transform-origin-y: 50%;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	z-index: 0;	
 	text-align: center;
 }
 .leftanim
 {
+	transform: perspective(300) rotateY(20deg);
+	-ms-transform: perspective(300) rotateY(20deg);
 	-webkit-transform: perspective(300) rotateY(20deg);
 }
 .rightanim
 {
+	transform: perspective(300) rotateY(-20deg);
+	-ms-transform: perspective(300) rotateY(-20deg);
 	-webkit-transform: perspective(300) rotateY(-20deg);
 }
 .blur
@@ -228,6 +244,8 @@ body
 	border-bottom:0px;
 	cursor: pointer;
 	z-index: 1;/* other wise others will tile over this*/
+	transform: perspective(300) translateZ(70px)
+	-ms-transform: perspective(300) translateZ(70px);
 	-webkit-transform: perspective(300) translateZ(70px);
 	-webkit-box-shadow: -10px 5px 50px 6px #000;
 }
@@ -240,7 +258,9 @@ body
 	left:50%;
 	width:0px;
 	height:0px;
+	transition:all .7s ease-in-out;
 	-webkit-transition:all .7s ease-in-out;
+	-moz-transition:all .7s ease-in-out;
 }
 .selected
 {
@@ -252,7 +272,9 @@ body
 	width:56%;
 	height:80%;
 	border-radius: 25px;
+	transition:all .7s ease-in-out;
 	-webkit-transition:all .7s ease-in-out;
+	-moz-transition:all .7s ease-in-out;
 	opacity:0.8;
 	background-color: black;
 }
@@ -274,15 +296,15 @@ body
 	width:auto;
 	float:left;
 }
-.marketing
+.quarter
  {
 	width:25%;
  }
-.pr
+.third
  {
  	width:33%;
  }
-.website
+.half
  {
  	width: 50%;
  }
@@ -290,7 +312,7 @@ h1
 {
 	font-size:150%;
 	margin:auto;
-	margin-bottom: 3%;
+	margin-bottom: 1%;
 	color:#AAAADD;
 }
 h2
@@ -302,7 +324,6 @@ h3
 {
 	margin:auto;
 	font-size:100%;
-	margin-bottom: 5%
 }
 h4
  {
@@ -344,19 +365,31 @@ h4
 	z-index: 1;
 	width:100%;
 	height:400px;
+	transform: perspective(300) rotateY(0deg);
 	-webkit-transform: perspective(300) rotateY(0deg);
+	-ms-transform: perspective(300) rotateY(0deg);
+	-moz-transform: perspective(300) rotateY(0deg);
+	transform-style: preserve-3d;	
 	-webkit-transform-style: preserve-3d;	
+	-moz-transform-style: preserve-3d;	
+	-ms-transform-style: preserve-3d;	
+	transition:all 1s ease;
 	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
 }
 .back
 {
 	opacity: 0;
+	transition:all 1s ease;
 	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
 }
 .front
 {
 	opacity: 1;
+	transition:all 1s ease;
 	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
 }
 #container>img
 {
@@ -374,8 +407,10 @@ h4
 	left: 0px;
 	width:80%;/*for smooth transition when gallery will hide(after odd number of clicks)*/
 	height: 100%;
+	transform: perspective(300) translateZ(-1px) rotateY(180deg); 
 	-webkit-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
-
+	-moz-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
+	-ms-transform: perspective(300) translateZ(-1px) rotateY(180deg); 
 }
 #back
 {
