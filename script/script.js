@@ -112,7 +112,7 @@ showimage=function(location,dir){
 	});
 	$(".thumbs").mousemove(function(e){
 		position=e.pageX;
-		relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
+		relative_pos=position-90.52;
 		largewidth=$(".thumbs").width();
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;

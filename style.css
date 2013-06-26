@@ -215,7 +215,7 @@ body
 	-webkit-transition:all .3s ease-in-out;
 	-moz-transition:all .3s ease-in-out;
 	transform-origin: 50% 50%;
-	transform-mozigin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
 	-webkit-transform: perspective(300) translateZ(0px);
 	-webkit-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
@@ -225,6 +225,7 @@ body
 .leftanim
 {
 	transform: perspective(300) rotateY(20deg);
+	-moz-transform: perspective(300) rotateY(20deg);
 	-ms-transform: perspective(300) rotateY(20deg);
 	-webkit-transform: perspective(300) rotateY(20deg);
 }
@@ -232,6 +233,7 @@ body
 {
 	transform: perspective(300) rotateY(-20deg);
 	-ms-transform: perspective(300) rotateY(-20deg);
+	-moz-transform: perspective(300) rotateY(-20deg);
 	-webkit-transform: perspective(300) rotateY(-20deg);
 }
 .blur
@@ -323,7 +325,7 @@ h2
 h3
 {
 	margin:auto;
-	font-size:100%;
+	font-size:90%;
 }
 h4
  {
@@ -339,7 +341,7 @@ h4
 	border-top: 0px;
 	bottom:0px;
 	margin-left:0px;
-	width:5760px;
+	width:5400px;
 	height:100px;
 	cursor:pointer;
 }
