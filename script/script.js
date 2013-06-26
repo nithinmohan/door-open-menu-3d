@@ -49,7 +49,8 @@ $(document).ready(function() {
 	});
 //gallery
 k=0;
-var no_of_thumbs=32;
+var no_of_thumbs=18;
+var thumb_width=180;
 var src=$("#onep").attr("src");
 function addimage(number)
 {
@@ -76,7 +77,7 @@ showimage=function(location,dir){
 		$("#container>img").toggleClass("back front");
 	}};
 	$("#two").click(function(){
-		set_thumbs(32,180);
+		set_thumbs(no_of_thumbs,thumb_width);
 	});
 	$("#next").click(function(){
 		srcarray=src.split('/');
@@ -103,7 +104,8 @@ showimage=function(location,dir){
 	
 	$(".thumbs").mousemove(function(e){
 		position=e.pageX;
-		relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
+		relative_pos=position-300.52;
+		//relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
 		largewidth=$(".thumbs").width();
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
