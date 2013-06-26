@@ -14,6 +14,16 @@ selected_state=function()
 comefor=function(elem){$(".menuitem").removeClass("menuhover");$(elem).addClass("menuhover");}//for forwarding hovered menuitem and setting its blur zero
 comeback=function(){$(".menuitem").removeClass("menuhover");}//setting menu hover effect to zero for all menuitems
 $(document).ready(function() {
+	$(window).load(function() {$("#welcome").fadeOut('fast'); })
+	$("#creditsbox").hide();
+	$("#credits").click(function()
+	{
+		$("#creditsbox").fadeToggle("slow");
+		$("#wallpaper").click(function()
+		{
+			$("#creditsbox").fadeOut("slow");
+		})
+	});
 	var cur_selected;
 	$(".menublocks").mouseenter(selected_state);
 	$(".menublocks").mouseleave(initial_state);
@@ -51,6 +61,7 @@ $(document).ready(function() {
 k=0;
 var no_of_thumbs=18;
 var thumb_width=180;
+
 var src=$("#onep").attr("src");
 function addimage(number)
 {
@@ -78,6 +89,7 @@ showimage=function(location,dir){
 	}};
 	$("#two").click(function(){
 		set_thumbs(no_of_thumbs,thumb_width);
+
 	});
 	$("#next").click(function(){
 		srcarray=src.split('/');
@@ -101,20 +113,18 @@ showimage=function(location,dir){
 		if(event.which==39)
 			$("#next").trigger("click");
 	});
-	
 	$(".thumbs").mousemove(function(e){
 		position=e.pageX;
 		relative_pos=position-300.52;
 		//relative_pos=position-parseInt($("#super").css("margin-left"))-parseInt($(".selected").css("left"))*$(window).width()/100;
+
 		largewidth=$(".thumbs").width();
 		smallwidth=$("#super").width();
 		largewidth=largewidth-smallwidth;
 		newmar=relative_pos*largewidth/smallwidth;
-		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 'slow',easing: 'easeOutBack'});
+		$(".thumbs").stop().animate({"margin-left":"-"+newmar+"px"},{duration: 2000,easing: 'easeOutSine'});
 	});
-	
 	$(".thumbs>img").live("click",function(){
 		showimage($(this).attr("src"),1);
 	});
-
 });
